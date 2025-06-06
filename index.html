@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio-Italo Marcio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#Projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#Contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <img src="img/WhatsApp Image 2025-01-03 at 15.31.31.jpeg" alt="Foto de Italo Marcio" class="foto-perfil">
+        <h1>Italo Marcio</h1>
+        <P class="cabecalho-sub-titulo"> Desenvolvendor Front-End</P>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">Ítalo Márcio França da Costa é uma pessoa dedicada, atenta e com grande
+                disposição para aprender e crescer. O que essa pessoa pode criar?
+                Com uma base sólida e projetos práticos, as possibilidades são vastas:
+
+                Websites responsivos: Páginas que se adaptam a diferentes tamanhos de tela (desktops, tablets,
+                celulares).
+                Interfaces de usuário interativas: Menus de navegação dinâmicos, formulários com validação em tempo
+                real, galerias de imagens interativas, etc.
+                Aplicações web: Pequenos sistemas que resolvem problemas específicos, como calculadoras, conversores de
+                unidades, listas de tarefas, etc.
+                Animações e efeitos visuais: Com CSS e JavaScript, pode criar experiências de usuário mais ricas e
+                envolventes.</p>
+    </div>
+        
+        </section>
+    </section>
+
+    <section id="Projetos" class="Projetos">
+        <h2 class="Projetos-titulos">Meus Projetos</h2>
+        <div class="projeto-caixa">
+
+            <div class="projetos-card">
+                <img src="img/Projeto1.jpg" alt="projeto-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Portal do Aluno Uninassau</h3>
+                    <p class="paragrafo-projetos">trabalho de faculade com mudaças de art-designer e layout do
+                        portal do Aluno</p>
+                </div>
+            </div>
+            
+            <div class="projetos-card">
+                <img src="img/Projeto1.jpg" alt="projeto-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Portal do Aluno Uninassau</h3>
+                    <p class="paragrafo-projetos">trabalho de faculade com mudaças de art-designer e layout do
+                        portal do Aluno</p>
+                </div>
+            </div>
+            <div class="projetos-card">
+                <img src="img/Projeto1.jpg" alt="projeto-imagem">
+                <div class="caixa-texto-projeto">
+                    <h3 class="info-projetos">Portal do Aluno Uninassau</h3>
+                    <p class="paragrafo-projetos">trabalho de faculade com mudaças de art-designer e layout do
+                        portal do Aluno</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contatos</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+    <script>
+
+        function enviarwhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5586999295559'
+
+            const texto = 'Olá! Me chamo ${nome}, ${mensagem}'
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = 'https://wa.me/5586999295559?text=Olá, Gostaria de fazer um Site!'
+
+            window.open(url, '_blank')
+        }
+
+
+    </script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Italo Marcio França da Costa. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
